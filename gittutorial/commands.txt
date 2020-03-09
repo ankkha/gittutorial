@@ -1,0 +1,3 @@
+git remote add origin https://github.com/yourusername/your-repo-name.git
+
+Above command helps to add/create a repo with existing files in this folder
