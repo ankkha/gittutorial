@@ -1,0 +1,12 @@
+1. docker run  => to run an instance of an application from an image
+2. docker ps   => to list all the running containers
+3. docker ps -a => to list all containers whether its running or stopped or exicted
+4. docker stop <containerid> => to stop a running container
+5. docker rm => to remove stopped container
+6. docker images => to list down all the docker images present in the host
+7. docker rmi image => to delete an existing image but please remember that you have already stopped/deleted corresponding containers.
+8. docker pull => to just pull the image instead pull and run  using docker run
+9. A container lives until a process inside the container needs to be executed. As long as all the processes inside the containers finishes, containers stop itself.
+10. docker exec => to run a command inside container
+11. docker run -t => to run a container in detach mode
+
