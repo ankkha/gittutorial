@@ -10,3 +10,14 @@
 10. docker exec => to run a command inside container
 11. docker run -t => to run a container in detach mode
 
+
+
+Create a Volume: docker volume create --name new_volume
+Display detailed information on Volumes: docker volume inspect new_volume
+List volumes: docker volume ls
+Remove unused volumes : docker volume prune
+This will remove 'new_volume'.
+
+<b>Remove one or more volumes</b>
+docker volume create --name new_volume1
+docker volume rm new_volume1
