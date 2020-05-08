@@ -21,3 +21,14 @@ This will remove 'new_volume'.
 <b>Remove one or more volumes</b>
 docker volume create --name new_volume1
 docker volume rm new_volume1
+
+
+Command to Back up Volumes:
+
+docker run --rm --volumes-from dbstore -v $(pwd):/backup ubuntu tar cvf /backup/backup.tar /dbdata
+Command to Restore Volumes:
+
+Create new container
+
+docker run -v /dbdata --name dbstore2 ubuntu /bin/bash
+docker run --rm --volumes-from dbstore2 -v $(pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"
