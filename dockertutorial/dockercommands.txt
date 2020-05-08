@@ -32,3 +32,30 @@ Create new container
 
 docker run -v /dbdata --name dbstore2 ubuntu /bin/bash
 docker run --rm --volumes-from dbstore2 -v $(pwd):/backup ubuntu bash -c "cd /dbdata && tar xvf /backup/backup.tar --strip 1"
+
+Questions
+
+Create an Image (InsImage) and Run a Container (InsContainer) using the image.
+
+Create a new bridge (InsNetwork) and connect the container to this bridge
+
+Create a new storage volume (InsVolume) and mount this on InsContainer.
+
+Now Run Docker inspect command on Image, Container, network and volume craeted.
+
+
+
+Create a new bridge 'bridge_sample'.
+
+Run a couple of images (Cont1 and Cont2) and connect these to the new bridge created. Now try to ping from cont1 to cont2 to verify connectivity.
+
+Once done, stop containers and then remove network, containers, and images using docker commands.
+
+
+
+
+Create a new storage volume 'volume1' and mount this on to a container 'Web'. Create another volume 'volume2'.
+
+Stop the container and remove volume mounted. Run command to remove unused volume ('volume2').
+
+
